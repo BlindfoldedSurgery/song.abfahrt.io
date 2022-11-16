@@ -5,4 +5,4 @@ metadata:
   namespace: {{ .Values.namespace.name }}
 spec:
   type: ExternalName
-  externalName: {{ .Values.namespace.externalName }}
+  externalName: {{ .Values.service.externalName }}
