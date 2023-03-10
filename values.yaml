@@ -7,11 +7,8 @@ ingress:
     - name: song.abfahrt.io
   secret: tls-song
   issuer: letsencrypt-issuer
-  customAnnotations:
-    nginx.ingress.kubernetes.io/server-snippet: |
-      return 301 https://song.link/i/1436733646;
 
 service:
   name: song
   port: 80
-  externalName: noop
+  externalName: song.link/i/1436733646
