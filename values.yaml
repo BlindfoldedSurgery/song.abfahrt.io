@@ -14,4 +14,4 @@ ingress:
 service:
   name: song
   port: 80
-  externalName: noop
+  externalName: song.link
