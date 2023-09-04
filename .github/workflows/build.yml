@@ -7,10 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: WyriHaximus/github-action-helm3@v2
+      - uses: WyriHaximus/github-action-helm3@v3
         with:
           exec: helm lint
-      - uses: WyriHaximus/github-action-helm3@v2
+      - uses: WyriHaximus/github-action-helm3@v3
         with:
           exec: helm lint --strict
   template:
@@ -18,6 +18,6 @@ jobs:
     needs: lint
     steps:
       - uses: actions/checkout@v4
-      - uses: WyriHaximus/github-action-helm3@v2
+      - uses: WyriHaximus/github-action-helm3@v3
         with:
           exec: helm template . --debug
